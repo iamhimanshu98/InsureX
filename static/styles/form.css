@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Verdana, sans-serif;
+    color: white;
+}
+:root {
+    --color1 : rgb(69, 37, 130);
+    --color2 : #353965;
+    --color3 : rgb(220, 220, 247);
+    --color4 : #ff996e;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: rgb(20, 3, 63);
+    min-height: 100vh;
+    background: url('/static/files/neon.jpg');
+}
+
+.nav-bar {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+    gap: 2em;
+    font-size: 1.4rem;
+    font-weight: 500;
+    height: 6rem;
+    background-color: #201b3944;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    text-decoration: none;
+}
+
+#project-title {
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s;
+    font-family: "Permanent Marker";
+}
+
+#project-title:hover {
+    color: var(--color3);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: -2px;
+    min-height: 100vh;
+    padding: 6em 6em 6em;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10rem);
+}
+
+.welcome {
+    margin-top: 2em;
+    font-weight: 500;
+    text-wrap: wrap;
+}
+
+.welcome p {
+    font-size: 1.8rem;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+.container {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 2em 0em;
+    padding: 4em;
+    backdrop-filter: blur(5px);
+    background-color: aliceblue;
+    border-radius: 8px;
+    color: black;
+    width: 60vh;
+    max-width: 80vh;
+}
+
+.form-option {
+    min-width: 45vh;
+    padding: 10px;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: aliceblue;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    margin-bottom: 2em;
+}
+
+.form-option:focus {
+    border-color: #7378f7;
+    box-shadow: 0 0 5px rgba(103, 90, 205, 0.5);
+}
+
+.form-option option[value=""] {
+    color: #666;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.8rem;
+}
+
+.form-option option {
+    color: #000;
+}
+
+.form-group input,
+.form-group textarea {
+    min-width: 45vh;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: aliceblue;
+    font-size: 1rem;
+    transition: all 0.2s;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #7373f7;
+    box-shadow: 0 0 5px rgba(119, 90, 205, 0.5);
+    outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    color: #666;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:focus+label,
+.form-group textarea:not(:placeholder-shown)+label {
+    top: -24px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+}
+
+.container button,
+.container a {
+    width: auto;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    background-color: rgb(60, 46, 90);
+}
+
+.container button:hover {
+    background-color: rgb(71, 63, 139);
+}
+
+.container a {
+    background-color: rgb(92, 88, 88);
+}
+
+.container a:hover {
+    background-color: rgb(139, 145, 154);
+}

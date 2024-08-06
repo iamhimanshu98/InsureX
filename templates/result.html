@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result | PredictX</title>
+    <link rel="stylesheet" href="/static/styles/result.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a id="project-title" class="nav-item" href="/">InsureX</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card" id="result">
+            <p class="message">Hey {{ name }},</p>
+            <ul>
+                <li><strong>Age                     :   </strong> {{ age }}</li>
+                <li><strong>Gender                  :   </strong> {{ gender }}</li>
+                <li><strong>BMI                     :   </strong> {{ bmi }}</li>
+                <li><strong>Children                :   </strong> {{ children }}</li>
+                <li><strong>Smoker                  :   </strong> {{ smoker }}</li>
+                <li><strong>Region                  :   </strong> {{ region }}</li>
+            </ul>
+            <div class="prediction">
+                <p><strong>Prediction   :  </strong> {{ output }}</p>
+            </div>
+            <div class="buttons">
+                <a id="back" href="/form">Back</a>
+                <a id="home" href="/">Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

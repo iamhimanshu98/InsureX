@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Verdana, sans-serif;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: rgb(20, 3, 63);
+    min-height: 100vh;
+    background: url('/static/files/neon.jpg');
+}
+
+:root {
+    --color1 : rgb(69, 37, 130);
+    --color2 : #353965;
+    --color3 : rgb(220, 220, 247);
+    --color4 : #ff996e;
+}
+
+.nav-bar {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+    gap: 2em;
+    font-size: 1.4rem;
+    font-weight: 500;
+    height: 6rem;
+    background-color: #201b3944;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+.nav-bar ul a {
+    position: relative;
+    color: white;
+    margin: 3px;
+    transition: all 0.3s ;
+    padding-bottom: 3px;
+}
+
+.nav-bar ul a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff7f6e;
+    transition: 0.2s;
+}
+
+.nav-bar ul a:hover::before {
+    width: 100%;
+}
+
+.nav-item {
+    text-decoration: none;
+}
+
+#project-title {
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s;
+    font-family: "Permanent Marker";
+}
+#project-title:hover {
+    color: var(--color3);
+}
+
+.page {
+    height: auto;
+    margin-bottom: -2px;
+    min-height: 100vh;
+    padding: 8em 6em 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10rem);
+}
+
+.page p {
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 2rem;
+    border: 1px solid none;
+    padding: 1em 3em;
+    border-radius: 10rem;
+    color: rgb(236, 236, 236);
+    box-shadow: 2px 4px 2px 1px rgb(0, 0, 0);
+    transition: all 0.5s;
+    z-index: 10;
+    font-weight: 600;
+}
+
+.button:hover {
+    color: #ffffff;
+    box-shadow: 0 2px 15px 5px rgb(220, 220, 247), 5px 0 15px 7px rgb(255, 126, 71);
+}
+
+.bg-image {
+    max-width: 150vw;
+    position: fixed;
+    width: 150vw;
+    z-index: -100;
+    background-color: rgb(1, 1, 33);
+}
+
+.section {
+    background-color: #281f5087;
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+    padding: 3em;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.section p {
+    font-size: 1.5rem;
+    margin:  1em;
+    font-weight: 400;
+    text-align: justify;
+    color: white;
+}
+
+#about img {
+    width: 50vh;
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.471));
+}
+
+.section p strong {
+    color: white;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+.info img {
+    border-radius: 50%;
+    width: 40vh;
+    height: 40vh;
+}
+.info p {
+    font-size: 2rem;
+    margin: 3em;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+@media screen and (max-width:1500px) {
+    .section{
+        flex-wrap: wrap;
+    }
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    /* gap: 5em; */ 
+    padding-bottom: 0%;
+}
+
+.icon {
+    width: 2.4rem;
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+.social-media {
+    background-color: #fafafe;
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+    padding: 3em;
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.3s;
+    margin: 6em 0 2em;
+}
+.social-media:hover{
+    transform: scale(1.01);
+}
+
+.social-media p {
+    font-size: 2rem;
+    margin:  1em;
+    font-weight: 200;
+    text-align: justify;
+    color: black;
+}
+
+.social-media a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin: 1.6em ;
+    flex-wrap: wrap;
+}
+
+.social-media a img {
+    margin-right: 1em;
+}
+
+.copyright p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #d0d0d0;
+}
